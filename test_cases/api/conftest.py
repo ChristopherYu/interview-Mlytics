@@ -7,6 +7,10 @@ from urllib.parse import urljoin
 
 
 def api_test_data() -> list:
+    """
+    parser html and get all image url by img tags
+    :return: a list of all urls that get image source.
+    """
     path = os.getcwd()
     with open(f"{path}/config/env.json", "r") as file:
         # config = json.load(file)
