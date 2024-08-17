@@ -10,7 +10,7 @@ def api_test_data() -> list:
     path = os.getcwd()
     with open(f"{path}/config/env.json", "r") as file:
         config = json.load(file)
-        url = config["url"]
+        url = config["UAT"]["url"]
         response = requests.get(url, verify=False)
         soup = BeautifulSoup(response.content, "html.parser")
 
